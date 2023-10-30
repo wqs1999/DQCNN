@@ -1,0 +1,10 @@
+[<tf.Variable 'Variable:0' shape=(12,) dtype=float64, numpy=
+array([ 0.11195506,  0.11122234,  0.30288316,  0.56807713, -0.05863455,
+        0.53437355,  0.29797437,  0.85854891,  0.49671055,  0.56606036,
+        0.46612197,  0.8652981 ])>, <tf.Variable 'Variable:0' shape=(2,) dtype=float64, numpy=array([0.36508754, 0.41075007])>, <tf.Variable 'Variable:0' shape=(12,) dtype=float64, numpy=
+array([ 0.18412312,  0.88741736,  0.02683301,  0.32392933,  0.00362191,
+        0.45751327,  0.90123148,  0.71576941,  0.70290948,  0.8308228 ,
+        0.9447337 , -0.071889  ])>, <tf.Variable 'Variable:0' shape=(2,) dtype=float64, numpy=array([0.72074304, 1.05061636])>, <tf.Variable 'Variable:0' shape=(12,) dtype=float64, numpy=
+array([0.25754386, 0.49264626, 0.92060102, 0.09243565, 0.30179383,
+       0.80502692, 0.69607872, 0.78451268, 0.75661656, 0.14739898,
+       0.47646362, 0.7979073 ])>, <tf.Variable 'Variable:0' shape=(2,) dtype=float64, numpy=array([ 0.79929428, -0.17065595])>, <tf.Variable 'Variable:0' shape=(4,) dtype=float64, numpy=array([0.46548029, 0.265614  , 0.57317927, 0.79255355])>]
