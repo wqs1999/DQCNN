@@ -82,30 +82,35 @@ def readdata_2classes_1234():
     # for rea in read:
     #     print(rea)
     data = []
+    l=[0,0,0,0]
 
     for i in read:
-        if i[139] == '1.00E+00':
+        if i[139] == '1.00E+00' and l[0]<1000:
             temp = i[0:12] + i[13:22] + i[23:35] + i[36:71] + i[72:77] + i[78:94]+i[95:100]+i[101:127]+i[130:138]
             print(len(temp))
             temp = list(map(float, temp))
             if sum(temp) != 0:
                 data.append(temp + ['0'])
-        if i[139] == '2.00E+00':
+                l[0] = l[0]+1
+        if i[139] == '2.00E+00' and l[1]<1000:
             temp = i[0:12] + i[13:22] + i[23:35] + i[36:71] + i[72:77] + i[78:94]+i[95:100]+i[101:127]+i[130:138]
             temp = list(map(float, temp))
             if sum(temp) != 0:
                 data.append(temp + ['1'])
-        if i[139] == '3.00E+00':
+                l[1] = l[1] + 1
+        if i[139] == '3.00E+00' and l[2]<1000:
             temp = i[0:12] + i[13:22] + i[23:35] + i[36:71] + i[72:77] + i[78:94]+i[95:100]+i[101:127]+i[130:138]
             temp = list(map(float, temp))
             if sum(temp) != 0:
                 data.append(temp + ['2'])
-        if i[139] == '4.00E+00':
+                l[2] = l[2] + 1
+        if i[139] == '4.00E+00' and l[3]<1000:
             temp = i[0:12] + i[13:22] + i[23:35] + i[36:71] + i[72:77] + i[78:94]+i[95:100]+i[101:127]+i[130:138]
             temp = list(map(float, temp))
             if sum(temp) != 0:
                 data.append(temp + ['3'])
-    print(len(data))  # 3044
+                l[3] = l[3] + 1
+    print(len(data))  # 9772
     # print(data[2000][128])
 
     # print(data[1104])
@@ -114,9 +119,8 @@ def readdata_2classes_1234():
     data = data.astype(float)
     total_num = len(data)
 
-    data_train = data[0:8000].copy()
-
-    data_test = data[8000:9500].copy()
+    data_train = data[0:3500].copy()
+    data_test = data[3500:4000].copy()
 
     train_data, train_label = np.hsplit(data_train, [128])
     test_data, test_label = np.hsplit(data_test, [128])
